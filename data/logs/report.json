@@ -1,0 +1,135 @@
+{
+    "timestamp": "2026-04-08 16:32:14",
+    "features": [
+        {
+            "image_index": 0,
+            "method": "SIFT",
+            "keypoints": 2000,
+            "time_ms": 764.66
+        },
+        {
+            "image_index": 1,
+            "method": "SIFT",
+            "keypoints": 2000,
+            "time_ms": 638.29
+        },
+        {
+            "image_index": 2,
+            "method": "SIFT",
+            "keypoints": 2000,
+            "time_ms": 693.36
+        },
+        {
+            "image_index": 3,
+            "method": "SIFT",
+            "keypoints": 2000,
+            "time_ms": 616.34
+        }
+    ],
+    "matching": [
+        {
+            "pair": "0-1",
+            "total_matches": 2000,
+            "good_matches": 200,
+            "time_ms": 49.34
+        },
+        {
+            "pair": "0-2",
+            "total_matches": 2000,
+            "good_matches": 246,
+            "time_ms": 48.71
+        },
+        {
+            "pair": "0-3",
+            "total_matches": 2000,
+            "good_matches": 129,
+            "time_ms": 47.96
+        },
+        {
+            "pair": "1-2",
+            "total_matches": 2000,
+            "good_matches": 63,
+            "time_ms": 47.64
+        },
+        {
+            "pair": "1-3",
+            "total_matches": 2000,
+            "good_matches": 37,
+            "time_ms": 48.82
+        },
+        {
+            "pair": "2-3",
+            "total_matches": 2000,
+            "good_matches": 451,
+            "time_ms": 47.72
+        },
+        {
+            "pair": "0-2",
+            "total_matches": 2000,
+            "good_matches": 247,
+            "time_ms": 49.94
+        },
+        {
+            "pair": "1-2",
+            "total_matches": 2000,
+            "good_matches": 64,
+            "time_ms": 47.55
+        },
+        {
+            "pair": "3-2",
+            "total_matches": 2000,
+            "good_matches": 477,
+            "time_ms": 47.11
+        }
+    ],
+    "homography": [
+        {
+            "pair": "0-1",
+            "inliers": 84,
+            "inlier_ratio": 0.42
+        },
+        {
+            "pair": "0-2",
+            "inliers": 75,
+            "inlier_ratio": 0.3049
+        },
+        {
+            "pair": "0-3",
+            "inliers": 38,
+            "inlier_ratio": 0.2946
+        },
+        {
+            "pair": "1-2",
+            "inliers": 26,
+            "inlier_ratio": 0.4127
+        },
+        {
+            "pair": "1-3",
+            "inliers": 10,
+            "inlier_ratio": 0.2703
+        },
+        {
+            "pair": "2-3",
+            "inliers": 263,
+            "inlier_ratio": 0.5831
+        },
+        {
+            "pair": "0-2",
+            "inliers": 76,
+            "inlier_ratio": 0.3077
+        },
+        {
+            "pair": "1-2",
+            "inliers": 27,
+            "inlier_ratio": 0.4219
+        },
+        {
+            "pair": "3-2",
+            "inliers": 232,
+            "inlier_ratio": 0.4864
+        }
+    ],
+    "blending": {
+        "time_ms": 6411.17
+    }
+}

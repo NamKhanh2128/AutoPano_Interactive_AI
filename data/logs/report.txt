@@ -1,0 +1,35 @@
+=== BÁO CÁO KẾT QUẢ PANORAMA (CLASSICAL TRUYỀN THỐNG) ===
+Thời gian làm báo cáo: 2026-04-08 16:32:14
+Quy trình bao gồm: Tiền xử lý ánh sáng -> Trích xuất features SIFT/ORB -> Nối FLANN + Lọc Lowe's -> Tính RANSAC Homography -> Projective Warping -> Laplacian Blending.
+--------------------------------------------------
+
+1. Trích xuất đặc trưng (Features SIFT/ORB):
+  - Ảnh 0: Sử dụng phương pháp SIFT -> Tìm được 2000 điểm keypoints (764.66 ms)
+  - Ảnh 1: Sử dụng phương pháp SIFT -> Tìm được 2000 điểm keypoints (638.29 ms)
+  - Ảnh 2: Sử dụng phương pháp SIFT -> Tìm được 2000 điểm keypoints (693.36 ms)
+  - Ảnh 3: Sử dụng phương pháp SIFT -> Tìm được 2000 điểm keypoints (616.34 ms)
+
+2. Ghép cặp (Matching - FLANN K-Nearest Neighbors + Lowe's Ratio Test):
+  - Cặp ảnh 0-1: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 200 (49.34 ms)
+  - Cặp ảnh 0-2: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 246 (48.71 ms)
+  - Cặp ảnh 0-3: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 129 (47.96 ms)
+  - Cặp ảnh 1-2: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 63 (47.64 ms)
+  - Cặp ảnh 1-3: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 37 (48.82 ms)
+  - Cặp ảnh 2-3: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 451 (47.72 ms)
+  - Cặp ảnh 0-2: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 247 (49.94 ms)
+  - Cặp ảnh 1-2: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 64 (47.55 ms)
+  - Cặp ảnh 3-2: Tổng số matches (k=2): 2000 -> Độ tin cậy (Good matches): 477 (47.11 ms)
+
+3. Lọc nhiễu & Ma trận chuyển đổi (RANSAC & Homography):
+  - Cặp ảnh 0-1: Điểm Inliers hợp lệ: 84 (Tỷ lệ phân tán: 42.00%)
+  - Cặp ảnh 0-2: Điểm Inliers hợp lệ: 75 (Tỷ lệ phân tán: 30.49%)
+  - Cặp ảnh 0-3: Điểm Inliers hợp lệ: 38 (Tỷ lệ phân tán: 29.46%)
+  - Cặp ảnh 1-2: Điểm Inliers hợp lệ: 26 (Tỷ lệ phân tán: 41.27%)
+  - Cặp ảnh 1-3: Điểm Inliers hợp lệ: 10 (Tỷ lệ phân tán: 27.03%)
+  - Cặp ảnh 2-3: Điểm Inliers hợp lệ: 263 (Tỷ lệ phân tán: 58.31%)
+  - Cặp ảnh 0-2: Điểm Inliers hợp lệ: 76 (Tỷ lệ phân tán: 30.77%)
+  - Cặp ảnh 1-2: Điểm Inliers hợp lệ: 27 (Tỷ lệ phân tán: 42.19%)
+  - Cặp ảnh 3-2: Điểm Inliers hợp lệ: 232 (Tỷ lệ phân tán: 48.64%)
+
+4. Projective Warping & Laplacian Blending (Thành phẩm):
+  - Hoàn tất thời gian hoà trộn: 6411.17 ms
