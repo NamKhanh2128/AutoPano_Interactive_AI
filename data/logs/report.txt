@@ -1,22 +1,23 @@
 === BÁO CÁO KẾT QUẢ PANORAMA (CHẾ ĐỘ LAI GHÉP - HYBRID AI) ===
-Thời gian trích xuất báo cáo: 2026-04-08 17:07:09
+Thời gian trích xuất báo cáo: 2026-04-10 18:09:32
 Quy trình công nghệ: Tiền xử lý (CLAHE) -> Đọc điểm ngữ cảnh qua Neural Network (LoFTR) -> Lược bỏ nhiễu biên (MAGSAC++) -> Lan truyền ma trận tự động (BFS Projective Warping) -> Đổ màu mép cứng (Voronoi/Feathering Blending).
 --------------------------------------------------
 
 1. Trích xuất điểm tương đồng (Deep Learning - LoFTR):
-  - Cặp ảnh 0-1: Số điểm AI tìm thấy theo ngữ cảnh: 644 -> Siêu lọc độ tự tin (Confidence > 60%): 644 (3555.99 ms)
-  - Cặp ảnh 0-2: Số điểm AI tìm thấy theo ngữ cảnh: 1148 -> Siêu lọc độ tự tin (Confidence > 60%): 1148 (3681.38 ms)
-  - Cặp ảnh 0-3: Số điểm AI tìm thấy theo ngữ cảnh: 650 -> Siêu lọc độ tự tin (Confidence > 60%): 650 (3442.51 ms)
-  - Cặp ảnh 1-2: Số điểm AI tìm thấy theo ngữ cảnh: 222 -> Siêu lọc độ tự tin (Confidence > 60%): 222 (3201.4 ms)
-  - Cặp ảnh 1-3: Số điểm AI tìm thấy theo ngữ cảnh: 12 -> Siêu lọc độ tự tin (Confidence > 60%): 12 (3108.73 ms)
-  - Cặp ảnh 2-3: Số điểm AI tìm thấy theo ngữ cảnh: 1560 -> Siêu lọc độ tự tin (Confidence > 60%): 1560 (4112.55 ms)
+  - Cặp ảnh 0-1: Số điểm AI tìm thấy theo ngữ cảnh: 4326 -> Siêu lọc độ tự tin (Confidence > 60%): 4326 (13544.82 ms)
+  - Cặp ảnh 0-2: Số điểm AI tìm thấy theo ngữ cảnh: 1701 -> Siêu lọc độ tự tin (Confidence > 60%): 1701 (11337.39 ms)
+  - Cặp ảnh 0-3: Số điểm AI tìm thấy theo ngữ cảnh: 36 -> Siêu lọc độ tự tin (Confidence > 60%): 36 (9576.88 ms)
+  - Cặp ảnh 1-2: Số điểm AI tìm thấy theo ngữ cảnh: 6629 -> Siêu lọc độ tự tin (Confidence > 60%): 6629 (13231.75 ms)
+  - Cặp ảnh 1-3: Số điểm AI tìm thấy theo ngữ cảnh: 43 -> Siêu lọc độ tự tin (Confidence > 60%): 43 (9965.27 ms)
+  - Cặp ảnh 2-3: Số điểm AI tìm thấy theo ngữ cảnh: 1329 -> Siêu lọc độ tự tin (Confidence > 60%): 1329 (10818.14 ms)
 
 2. Rút trích Ma trận & Tính toán Inliers (Thuật toán MAGSAC++):
-  - Cặp ảnh 0-1: Số lượng móc neo bảo toàn: 166 (Tỷ lệ bám dính Inliers / Điểm AI: 25.78%)
-  - Cặp ảnh 0-2: Số lượng móc neo bảo toàn: 288 (Tỷ lệ bám dính Inliers / Điểm AI: 25.09%)
-  - Cặp ảnh 0-3: Số lượng móc neo bảo toàn: 210 (Tỷ lệ bám dính Inliers / Điểm AI: 32.31%)
-  - Cặp ảnh 1-2: Số lượng móc neo bảo toàn: 72 (Tỷ lệ bám dính Inliers / Điểm AI: 32.43%)
-  - Cặp ảnh 2-3: Số lượng móc neo bảo toàn: 601 (Tỷ lệ bám dính Inliers / Điểm AI: 38.53%)
+  - Cặp ảnh 0-1: Số lượng móc neo bảo toàn: 4238 (Tỷ lệ bám dính Inliers / Điểm AI: 97.97%)
+  - Cặp ảnh 0-2: Số lượng móc neo bảo toàn: 1608 (Tỷ lệ bám dính Inliers / Điểm AI: 94.53%)
+  - Cặp ảnh 0-3: Số lượng móc neo bảo toàn: 7 (Tỷ lệ bám dính Inliers / Điểm AI: 19.44%)
+  - Cặp ảnh 1-2: Số lượng móc neo bảo toàn: 6529 (Tỷ lệ bám dính Inliers / Điểm AI: 98.49%)
+  - Cặp ảnh 1-3: Số lượng móc neo bảo toàn: 8 (Tỷ lệ bám dính Inliers / Điểm AI: 18.60%)
+  - Cặp ảnh 2-3: Số lượng móc neo bảo toàn: 1197 (Tỷ lệ bám dính Inliers / Điểm AI: 90.07%)
 
 3. Phân luồng Cây (BFS Projective Warping) & Hoà trộn Đồ hoạ (Feathering Blending):
-  - Hoàn tất thời gian vẽ bạt lưới và bù trừ khối lượng: 16777.87 ms
+  - Hoàn tất thời gian vẽ bạt lưới và bù trừ khối lượng: 25753.5 ms

@@ -1,72 +1,77 @@
 {
-    "timestamp": "2026-04-08 17:07:09",
+    "timestamp": "2026-04-10 18:09:32",
     "features": [],
     "matching": [
         {
             "pair": "0-1",
-            "total_matches": 644,
-            "good_matches": 644,
-            "time_ms": 3555.99
+            "total_matches": 4326,
+            "good_matches": 4326,
+            "time_ms": 13544.82
         },
         {
             "pair": "0-2",
-            "total_matches": 1148,
-            "good_matches": 1148,
-            "time_ms": 3681.38
+            "total_matches": 1701,
+            "good_matches": 1701,
+            "time_ms": 11337.39
         },
         {
             "pair": "0-3",
-            "total_matches": 650,
-            "good_matches": 650,
-            "time_ms": 3442.51
+            "total_matches": 36,
+            "good_matches": 36,
+            "time_ms": 9576.88
         },
         {
             "pair": "1-2",
-            "total_matches": 222,
-            "good_matches": 222,
-            "time_ms": 3201.4
+            "total_matches": 6629,
+            "good_matches": 6629,
+            "time_ms": 13231.75
         },
         {
             "pair": "1-3",
-            "total_matches": 12,
-            "good_matches": 12,
-            "time_ms": 3108.73
+            "total_matches": 43,
+            "good_matches": 43,
+            "time_ms": 9965.27
         },
         {
             "pair": "2-3",
-            "total_matches": 1560,
-            "good_matches": 1560,
-            "time_ms": 4112.55
+            "total_matches": 1329,
+            "good_matches": 1329,
+            "time_ms": 10818.14
         }
     ],
     "homography": [
         {
             "pair": "0-1",
-            "inliers": 166,
-            "inlier_ratio": 0.2578
+            "inliers": 4238,
+            "inlier_ratio": 0.9797
         },
         {
             "pair": "0-2",
-            "inliers": 288,
-            "inlier_ratio": 0.2509
+            "inliers": 1608,
+            "inlier_ratio": 0.9453
         },
         {
             "pair": "0-3",
-            "inliers": 210,
-            "inlier_ratio": 0.3231
+            "inliers": 7,
+            "inlier_ratio": 0.1944
         },
         {
             "pair": "1-2",
-            "inliers": 72,
-            "inlier_ratio": 0.3243
+            "inliers": 6529,
+            "inlier_ratio": 0.9849
+        },
+        {
+            "pair": "1-3",
+            "inliers": 8,
+            "inlier_ratio": 0.186
         },
         {
             "pair": "2-3",
-            "inliers": 601,
-            "inlier_ratio": 0.3853
+            "inliers": 1197,
+            "inlier_ratio": 0.9007
         }
     ],
     "blending": {
-        "time_ms": 16777.87
+        "time_ms": 25753.5
     }
 }

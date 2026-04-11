@@ -2,6 +2,9 @@ import cv2
 import os
 import numpy as np
 
+print("[*] Đang khởi động hệ thống và nạp thư viện Trí Tuệ Nhân Tạo (PyTorch)...")
+print("    (Quá trình này có thể mất 10-20 giây trong lần chạy đầu tiên. Vui lòng không tắt chương trình!)")
+
 # Import các components từ pipeline Lai AI (Hybrid AI) mới
 from features import preprocess_images
 from matching import identify_anchor_image
