@@ -53,7 +53,7 @@ def main():
     # Bước 5: Chuyển đổi Perspective Warping & Cân chỉnh Canvas (Ma trận chuỗi BFS)
     canvas_shape, homographies, T = calculate_canvas_size(display_images, anchor_idx, match_matrix, H_matrix)
 
-    # Bước 6: Thành phẩm (Multi-band Laplacian/Feathering Blending & auto tỉa viền đen) trên bộ ảnh đã tăng cường màu
+    # Bước 6: Thành phẩm (Ghép đè trực tiếp) trên bộ ảnh đã tăng cường màu
     result_img = stitch_images(display_images, canvas_shape, homographies)
 
     # Bước 6.5: Tăng cường độ nét (Sharpening / Unsharp Mask)

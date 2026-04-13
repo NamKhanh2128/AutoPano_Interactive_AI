@@ -1,23 +1,31 @@
 === BÁO CÁO KẾT QUẢ PANORAMA (CHẾ ĐỘ LAI GHÉP - HYBRID AI) ===
-Thời gian trích xuất báo cáo: 2026-04-10 18:09:32
+Thời gian trích xuất báo cáo: 2026-04-14 00:54:02
 Quy trình công nghệ: Tiền xử lý (CLAHE) -> Đọc điểm ngữ cảnh qua Neural Network (LoFTR) -> Lược bỏ nhiễu biên (MAGSAC++) -> Lan truyền ma trận tự động (BFS Projective Warping) -> Đổ màu mép cứng (Voronoi/Feathering Blending).
 --------------------------------------------------
 
 1. Trích xuất điểm tương đồng (Deep Learning - LoFTR):
-  - Cặp ảnh 0-1: Số điểm AI tìm thấy theo ngữ cảnh: 4326 -> Siêu lọc độ tự tin (Confidence > 60%): 4326 (13544.82 ms)
-  - Cặp ảnh 0-2: Số điểm AI tìm thấy theo ngữ cảnh: 1701 -> Siêu lọc độ tự tin (Confidence > 60%): 1701 (11337.39 ms)
-  - Cặp ảnh 0-3: Số điểm AI tìm thấy theo ngữ cảnh: 36 -> Siêu lọc độ tự tin (Confidence > 60%): 36 (9576.88 ms)
-  - Cặp ảnh 1-2: Số điểm AI tìm thấy theo ngữ cảnh: 6629 -> Siêu lọc độ tự tin (Confidence > 60%): 6629 (13231.75 ms)
-  - Cặp ảnh 1-3: Số điểm AI tìm thấy theo ngữ cảnh: 43 -> Siêu lọc độ tự tin (Confidence > 60%): 43 (9965.27 ms)
-  - Cặp ảnh 2-3: Số điểm AI tìm thấy theo ngữ cảnh: 1329 -> Siêu lọc độ tự tin (Confidence > 60%): 1329 (10818.14 ms)
+  - Cặp ảnh 0-1: Số điểm AI tìm thấy theo ngữ cảnh: 2265 -> Siêu lọc độ tự tin (Confidence > 60%): 2265 (16034.61 ms)
+  - Cặp ảnh 0-2: Số điểm AI tìm thấy theo ngữ cảnh: 732 -> Siêu lọc độ tự tin (Confidence > 60%): 732 (12565.61 ms)
+  - Cặp ảnh 0-3: Số điểm AI tìm thấy theo ngữ cảnh: 828 -> Siêu lọc độ tự tin (Confidence > 60%): 828 (11773.39 ms)
+  - Cặp ảnh 0-4: Số điểm AI tìm thấy theo ngữ cảnh: 121 -> Siêu lọc độ tự tin (Confidence > 60%): 121 (11674.06 ms)
+  - Cặp ảnh 1-2: Số điểm AI tìm thấy theo ngữ cảnh: 2686 -> Siêu lọc độ tự tin (Confidence > 60%): 2686 (12644.29 ms)
+  - Cặp ảnh 1-3: Số điểm AI tìm thấy theo ngữ cảnh: 2746 -> Siêu lọc độ tự tin (Confidence > 60%): 2746 (13268.11 ms)
+  - Cặp ảnh 1-4: Số điểm AI tìm thấy theo ngữ cảnh: 710 -> Siêu lọc độ tự tin (Confidence > 60%): 710 (11238.45 ms)
+  - Cặp ảnh 2-3: Số điểm AI tìm thấy theo ngữ cảnh: 2780 -> Siêu lọc độ tự tin (Confidence > 60%): 2780 (12260.77 ms)
+  - Cặp ảnh 2-4: Số điểm AI tìm thấy theo ngữ cảnh: 2180 -> Siêu lọc độ tự tin (Confidence > 60%): 2180 (12061.87 ms)
+  - Cặp ảnh 3-4: Số điểm AI tìm thấy theo ngữ cảnh: 935 -> Siêu lọc độ tự tin (Confidence > 60%): 935 (11324.09 ms)
 
 2. Rút trích Ma trận & Tính toán Inliers (Thuật toán MAGSAC++):
-  - Cặp ảnh 0-1: Số lượng móc neo bảo toàn: 4238 (Tỷ lệ bám dính Inliers / Điểm AI: 97.97%)
-  - Cặp ảnh 0-2: Số lượng móc neo bảo toàn: 1608 (Tỷ lệ bám dính Inliers / Điểm AI: 94.53%)
-  - Cặp ảnh 0-3: Số lượng móc neo bảo toàn: 7 (Tỷ lệ bám dính Inliers / Điểm AI: 19.44%)
-  - Cặp ảnh 1-2: Số lượng móc neo bảo toàn: 6529 (Tỷ lệ bám dính Inliers / Điểm AI: 98.49%)
-  - Cặp ảnh 1-3: Số lượng móc neo bảo toàn: 8 (Tỷ lệ bám dính Inliers / Điểm AI: 18.60%)
-  - Cặp ảnh 2-3: Số lượng móc neo bảo toàn: 1197 (Tỷ lệ bám dính Inliers / Điểm AI: 90.07%)
+  - Cặp ảnh 0-1: Số lượng móc neo bảo toàn: 691 (Tỷ lệ bám dính Inliers / Điểm AI: 30.51%)
+  - Cặp ảnh 0-2: Số lượng móc neo bảo toàn: 302 (Tỷ lệ bám dính Inliers / Điểm AI: 41.26%)
+  - Cặp ảnh 0-3: Số lượng móc neo bảo toàn: 319 (Tỷ lệ bám dính Inliers / Điểm AI: 38.53%)
+  - Cặp ảnh 0-4: Số lượng móc neo bảo toàn: 56 (Tỷ lệ bám dính Inliers / Điểm AI: 46.28%)
+  - Cặp ảnh 1-2: Số lượng móc neo bảo toàn: 779 (Tỷ lệ bám dính Inliers / Điểm AI: 29.00%)
+  - Cặp ảnh 1-3: Số lượng móc neo bảo toàn: 864 (Tỷ lệ bám dính Inliers / Điểm AI: 31.46%)
+  - Cặp ảnh 1-4: Số lượng móc neo bảo toàn: 266 (Tỷ lệ bám dính Inliers / Điểm AI: 37.46%)
+  - Cặp ảnh 2-3: Số lượng móc neo bảo toàn: 909 (Tỷ lệ bám dính Inliers / Điểm AI: 32.70%)
+  - Cặp ảnh 2-4: Số lượng móc neo bảo toàn: 578 (Tỷ lệ bám dính Inliers / Điểm AI: 26.51%)
+  - Cặp ảnh 3-4: Số lượng móc neo bảo toàn: 284 (Tỷ lệ bám dính Inliers / Điểm AI: 30.37%)
 
 3. Phân luồng Cây (BFS Projective Warping) & Hoà trộn Đồ hoạ (Feathering Blending):
-  - Hoàn tất thời gian vẽ bạt lưới và bù trừ khối lượng: 25753.5 ms
+  - Hoàn tất thời gian vẽ bạt lưới và bù trừ khối lượng: 39576.08 ms

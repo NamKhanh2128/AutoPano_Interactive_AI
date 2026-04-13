@@ -62,7 +62,7 @@ class PanoLogger:
         with open(txt_file, "w", encoding="utf-8") as f:
             f.write(f"=== BÁO CÁO KẾT QUẢ PANORAMA (CHẾ ĐỘ LAI GHÉP - HYBRID AI) ===\n")
             f.write(f"Thời gian trích xuất báo cáo: {self.metrics['timestamp']}\n")
-            f.write("Quy trình công nghệ: Tiền xử lý (CLAHE) -> Đọc điểm ngữ cảnh qua Neural Network (LoFTR) -> Lược bỏ nhiễu biên (MAGSAC++) -> Lan truyền ma trận tự động (BFS Projective Warping) -> Đổ màu mép cứng (Voronoi/Feathering Blending).\n")
+            f.write("Quy trình công nghệ: Tiền xử lý (CLAHE) -> Đọc điểm ngữ cảnh qua Neural Network (LoFTR) -> Lược bỏ nhiễu biên (MAGSAC++) -> Lan truyền ma trận tự động (BFS Projective Warping) -> Ghép đè trực tiếp ảnh lên Canvas.\n")
             f.write("--------------------------------------------------\n\n")
             
             f.write("1. Trích xuất điểm tương đồng (Deep Learning - LoFTR):\n")
@@ -74,7 +74,7 @@ class PanoLogger:
                 f.write(f"  - Cặp ảnh {h_data['pair']}: Số lượng móc neo bảo toàn: {h_data['inliers']} (Tỷ lệ bám dính Inliers / Điểm AI: {h_data['inlier_ratio']*100:.2f}%)\n")
                 
             if "time_ms" in self.metrics["blending"]:
-                f.write(f"\n3. Phân luồng Cây (BFS Projective Warping) & Hoà trộn Đồ hoạ (Feathering Blending):\n")
+                f.write(f"\n3. Phân luồng Cây (BFS Projective Warping) & Ghép đè ảnh:\n")
                 f.write(f"  - Hoàn tất thời gian vẽ bạt lưới và bù trừ khối lượng: {self.metrics['blending']['time_ms']} ms\n")
                 
         print(f"[*] Đã xuất file báo cáo (report.txt) đo lường tại {txt_file} thành công.")

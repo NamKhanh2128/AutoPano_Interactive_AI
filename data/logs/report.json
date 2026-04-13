@@ -1,77 +1,121 @@
 {
-    "timestamp": "2026-04-10 18:09:32",
+    "timestamp": "2026-04-14 00:54:02",
     "features": [],
     "matching": [
         {
             "pair": "0-1",
-            "total_matches": 4326,
-            "good_matches": 4326,
-            "time_ms": 13544.82
+            "total_matches": 2265,
+            "good_matches": 2265,
+            "time_ms": 16034.61
         },
         {
             "pair": "0-2",
-            "total_matches": 1701,
-            "good_matches": 1701,
-            "time_ms": 11337.39
+            "total_matches": 732,
+            "good_matches": 732,
+            "time_ms": 12565.61
         },
         {
             "pair": "0-3",
-            "total_matches": 36,
-            "good_matches": 36,
-            "time_ms": 9576.88
+            "total_matches": 828,
+            "good_matches": 828,
+            "time_ms": 11773.39
+        },
+        {
+            "pair": "0-4",
+            "total_matches": 121,
+            "good_matches": 121,
+            "time_ms": 11674.06
         },
         {
             "pair": "1-2",
-            "total_matches": 6629,
-            "good_matches": 6629,
-            "time_ms": 13231.75
+            "total_matches": 2686,
+            "good_matches": 2686,
+            "time_ms": 12644.29
         },
         {
             "pair": "1-3",
-            "total_matches": 43,
-            "good_matches": 43,
-            "time_ms": 9965.27
+            "total_matches": 2746,
+            "good_matches": 2746,
+            "time_ms": 13268.11
+        },
+        {
+            "pair": "1-4",
+            "total_matches": 710,
+            "good_matches": 710,
+            "time_ms": 11238.45
         },
         {
             "pair": "2-3",
-            "total_matches": 1329,
-            "good_matches": 1329,
-            "time_ms": 10818.14
+            "total_matches": 2780,
+            "good_matches": 2780,
+            "time_ms": 12260.77
+        },
+        {
+            "pair": "2-4",
+            "total_matches": 2180,
+            "good_matches": 2180,
+            "time_ms": 12061.87
+        },
+        {
+            "pair": "3-4",
+            "total_matches": 935,
+            "good_matches": 935,
+            "time_ms": 11324.09
         }
     ],
     "homography": [
         {
             "pair": "0-1",
-            "inliers": 4238,
-            "inlier_ratio": 0.9797
+            "inliers": 691,
+            "inlier_ratio": 0.3051
         },
         {
             "pair": "0-2",
-            "inliers": 1608,
-            "inlier_ratio": 0.9453
+            "inliers": 302,
+            "inlier_ratio": 0.4126
         },
         {
             "pair": "0-3",
-            "inliers": 7,
-            "inlier_ratio": 0.1944
+            "inliers": 319,
+            "inlier_ratio": 0.3853
+        },
+        {
+            "pair": "0-4",
+            "inliers": 56,
+            "inlier_ratio": 0.4628
         },
         {
             "pair": "1-2",
-            "inliers": 6529,
-            "inlier_ratio": 0.9849
+            "inliers": 779,
+            "inlier_ratio": 0.29
         },
         {
             "pair": "1-3",
-            "inliers": 8,
-            "inlier_ratio": 0.186
+            "inliers": 864,
+            "inlier_ratio": 0.3146
+        },
+        {
+            "pair": "1-4",
+            "inliers": 266,
+            "inlier_ratio": 0.3746
         },
         {
             "pair": "2-3",
-            "inliers": 1197,
-            "inlier_ratio": 0.9007
+            "inliers": 909,
+            "inlier_ratio": 0.327
+        },
+        {
+            "pair": "2-4",
+            "inliers": 578,
+            "inlier_ratio": 0.2651
+        },
+        {
+            "pair": "3-4",
+            "inliers": 284,
+            "inlier_ratio": 0.3037
         }
     ],
     "blending": {
-        "time_ms": 25753.5
+        "time_ms": 39576.08
     }
 }
