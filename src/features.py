@@ -1,40 +1,27 @@
 import cv2
 import numpy as np
 
-def extract_features(images):
-    print("[*] Đang trích xuất đặc trưng (SIFT) cho từng ảnh...")
-    sift = cv2.SIFT_create()
-    orb = cv2.ORB_create()  # Fallback nếu SIFT thất bại
-    all_kps = []
-    all_des = []
+def preprocess_images(images):
+    print("[*] Đang thực hiện chế độ Lai ghép AI (Hybrid AI Core)")
+    
+    display_images = []
     
     for idx, img in enumerate(images):
         if img is None or img.size == 0:
-            print(f"[!] Ảnh {idx} rỗng, bỏ qua.")
-            all_kps.append(None)
-            all_des.append(None)
+            display_images.append(None)
             continue
+            
+        # ---------- (1.1) TIỀN XỬ LÝ NHÁNH HIỂN THỊ (ĐỒ HOẠ) ---------- 
+        # CLAHE (Contrast Limited Adaptive Histogram Equalization) nguyên bản
+        lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+        l, a, b = cv2.split(lab)
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+        cl = clahe.apply(l)
+        limg = cv2.merge((cl, a, b))
+        enhanced_img = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
         
-        # Resize nếu ảnh quá lớn (tăng tốc mà giữ chất lượng)
-        h, w = img.shape[:2]
-        if max(h, w) > 2000:
-            scale = 0.5
-            img = cv2.resize(img, (int(w * scale), int(h * scale)), interpolation=cv2.INTER_LINEAR)
-            print(f"[+] Resize ảnh {idx} xuống {img.shape[:2]}")
+        display_images.append(enhanced_img)
+        print(f"  [+] Ảnh {idx}: Đã nâng cấp tương phản mảng Đồ họa thành công.")
         
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        
-        # Thử SIFT trước
-        kp, des = sift.detectAndCompute(gray, None)
-        
-        # Nếu SIFT thất bại (ít kp), dùng ORB
-        if kp is None or len(kp) < 50:
-            print(f"[!] SIFT thất bại cho ảnh {idx} (kp={len(kp) if kp else 0}), chuyển sang ORB...")
-            kp, des = orb.detectAndCompute(gray, None)
-        
-        all_kps.append(kp)
-        all_des.append(des)
-        
-        print(f"[+] Ảnh {idx}: {len(kp) if kp else 0} keypoints, descriptors shape={des.shape if des is not None else 'None'}")
-        
-    return all_kps, all_des
+    # Nhánh AI sẽ được thu nhỏ (Resize) trực tiếp bên trong matching.py theo nhu cầu Batch
+    return display_images

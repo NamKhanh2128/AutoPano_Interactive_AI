@@ -1,0 +1,17 @@
+=== BÁO CÁO KẾT QUẢ PANORAMA (CHẾ ĐỘ LAI GHÉP - HYBRID AI) ===
+Thời gian trích xuất báo cáo: 2026-05-06 11:51:27
+Quy trình công nghệ: Tiền xử lý (CLAHE) -> Đọc điểm ngữ cảnh qua Neural Network (LoFTR) -> Lược bỏ nhiễu biên (MAGSAC++) -> Lan truyền ma trận tự động (BFS Projective Warping) -> Ghép đè trực tiếp ảnh lên Canvas.
+--------------------------------------------------
+
+1. Trích xuất điểm tương đồng (Deep Learning - LoFTR):
+  - Cặp ảnh 0-1: Số điểm AI tìm thấy theo ngữ cảnh: 2107 -> Siêu lọc độ tự tin (Confidence > 60%): 2107 (10008.5 ms)
+  - Cặp ảnh 0-2: Số điểm AI tìm thấy theo ngữ cảnh: 3347 -> Siêu lọc độ tự tin (Confidence > 60%): 3347 (9690.92 ms)
+  - Cặp ảnh 1-2: Số điểm AI tìm thấy theo ngữ cảnh: 3472 -> Siêu lọc độ tự tin (Confidence > 60%): 3472 (9862.34 ms)
+
+2. Rút trích Ma trận & Tính toán Inliers (Thuật toán MAGSAC++):
+  - Cặp ảnh 0-1: Số lượng móc neo bảo toàn: 1611 (Tỷ lệ bám dính Inliers / Điểm AI: 76.46%)
+  - Cặp ảnh 0-2: Số lượng móc neo bảo toàn: 3105 (Tỷ lệ bám dính Inliers / Điểm AI: 92.77%)
+  - Cặp ảnh 1-2: Số lượng móc neo bảo toàn: 3163 (Tỷ lệ bám dính Inliers / Điểm AI: 91.10%)
+
+3. Phân luồng Cây (BFS Projective Warping) & Ghép đè ảnh:
+  - Hoàn tất thời gian vẽ bạt lưới và bù trừ khối lượng: 1844.03 ms

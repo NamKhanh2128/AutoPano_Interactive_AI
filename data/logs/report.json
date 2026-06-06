@@ -1,0 +1,44 @@
+{
+    "timestamp": "2026-05-06 11:51:27",
+    "features": [],
+    "matching": [
+        {
+            "pair": "0-1",
+            "total_matches": 2107,
+            "good_matches": 2107,
+            "time_ms": 10008.5
+        },
+        {
+            "pair": "0-2",
+            "total_matches": 3347,
+            "good_matches": 3347,
+            "time_ms": 9690.92
+        },
+        {
+            "pair": "1-2",
+            "total_matches": 3472,
+            "good_matches": 3472,
+            "time_ms": 9862.34
+        }
+    ],
+    "homography": [
+        {
+            "pair": "0-1",
+            "inliers": 1611,
+            "inlier_ratio": 0.7646
+        },
+        {
+            "pair": "0-2",
+            "inliers": 3105,
+            "inlier_ratio": 0.9277
+        },
+        {
+            "pair": "1-2",
+            "inliers": 3163,
+            "inlier_ratio": 0.911
+        }
+    ],
+    "blending": {
+        "time_ms": 1844.03
+    }
+}
